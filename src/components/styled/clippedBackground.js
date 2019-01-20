@@ -1,19 +1,41 @@
 import React from 'react'
+import { graphql, StaticQuery } from 'gatsby'
 import styled from 'styled-components'
+import BackgroundImage from 'gatsby-background-image'
 
-import image from '../../images/code2.jpg'
+const BackgroundContent = styled.div`
+  height: 100%;
 
-const BackgroundContainer = styled.div`
-  height: 100vh;
-  width: 100vw;
-  background-blend-mode: multiply;
-  background-size: cover;
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-  background-image: url(${image});
-  background-color:${({ theme }) => theme.dark};
-  background-blend-mode: multiply;
 `
 
-export default function ClippedBackground(props) {
-  return <BackgroundContainer>{props.children}</BackgroundContainer>
-}
+
+const ClippedBackground = (props) => (
+  <StaticQuery query={graphql`
+    query {
+      desktop: file(relativePath: { eq: "bg-landing.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1920) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+    }
+  `}
+    render={data => {
+      const imageData = data.desktop.childImageSharp.fluid
+      return (
+        <BackgroundImage Tag="section"
+          className={props.className}
+          fluid={imageData}
+        >
+          <BackgroundContent>{props.children}</BackgroundContent>
+        </BackgroundImage>
+      )
+    }
+    }
+  />
+)
+
+
+
+export default ClippedBackground;

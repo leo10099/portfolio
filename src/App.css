@@ -77,3 +77,9 @@ th {
 .cursive {
   font-family: 'TheWoodlands';
 }
+
+.clipped-background {
+  height: 100vh;
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
