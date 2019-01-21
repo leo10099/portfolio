@@ -2,7 +2,8 @@ import React from 'react'
 import { ThemeProvider } from 'styled-components'
 import theme from '../components/styled/theme'
 import GlobalStyles from "../components/styled/globalStyles"
-import '../App.css'
+import '../css/app.css'
+
 
 const Layout = ({ children }) => (
   <>

@@ -34,11 +34,17 @@ const HeaderContent = styled.div`
   }
 
   .image-container{
-    
     height:100%;
     width:33%;
     display:inline-flex;
     justify-content:space-around;
+  }
+
+  .image-social:hover {
+    transition: 0.3s all ease;
+    transform: rotate(360deg);
+    transform: rotate(1turn) scale3d(1.4,1.4,1.4);
+    cursor:pointer;
   }
 
   .color-primary {
@@ -53,9 +59,9 @@ export default function Header() {
         <h1 className="title cursive">Leandro Hanc</h1>
         <h2 className="subtitle"><span className="color-primary">Web Developer</span></h2>
         <div className="image-container">
-          <img src={github} alt="Github" />
-          <img src={linkedin} alt="Linkeding" />
-          <img src={twitter} alt="Twitter" />
+          <img src={github} alt="Github" className="image-social" />
+          <img src={linkedin} alt="Linkeding" className="image-social" />
+          <img src={twitter} alt="Twitter" className="image-social" />
         </div>
       </HeaderContent>
     </ClippedBackground>
