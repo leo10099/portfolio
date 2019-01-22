@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { TheWoodlands } from "./fonts";
+import { TheWoodlands } from "../fonts";
 
 export default createGlobalStyle`
 

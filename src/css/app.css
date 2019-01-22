@@ -47,6 +47,11 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
 }
+
+body {
+  padding: 3rem;
+}
+
 *,
 *:before,
 *:after {
@@ -75,7 +80,7 @@ th {
 }
 
 .clipped-background {
-  height: 100vh;
+  height: 95vh;
   background-size: cover;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
