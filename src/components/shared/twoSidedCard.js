@@ -3,7 +3,6 @@ import React from 'react'
 import styled from 'styled-components'
 import Image from '../../images/code0.jpg'
 
-
 const CardSide = styled.div``
 
 const Card = styled.div`
@@ -12,7 +11,6 @@ const Card = styled.div`
   height: 52rem;
   width: 35rem;
   margin: 0 auto;
-
 
   ${CardSide} {
     height: 52rem;
@@ -35,12 +33,11 @@ const Card = styled.div`
   }
 
   .back {
- 
     transform: rotateY(180deg);
     background-image: linear-gradient(
       to right bottom,
-      ${({ theme }) => theme.darkBlue},
-      ${({ theme }) => theme.darkViolet}
+      ${({ theme }) => theme.primaryDark},
+      ${({ theme }) => theme.secondaryDark}
     );
   }
 
@@ -55,8 +52,8 @@ const CardImage = styled.div`
   background-blend-mode: screen;
   background-image: linear-gradient(
       to right bottom,
-      ${({ theme }) => theme.blue},
-      ${({ theme }) => theme.violet}
+      ${({ theme }) => theme.primary},
+      ${({ theme }) => theme.secondary}
     ),
     url(${Image});
 `
@@ -72,16 +69,16 @@ const CardTitle = styled.h4`
   width: 75%;
 `
 const CardTitleBackground = styled.span`
-  font-family: "Lato";
-  font-size:2..4rem;
-  line-height:2;
+  font-family: 'Lato';
+  font-size: 2.4rem;
+  line-height: 2;
   padding: 1.2rem 1.7rem;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
   background-image: linear-gradient(
     to right bottom,
-    ${({ theme }) => theme.darkBlue},
-    ${({ theme }) => theme.darkViolet}
+    ${({ theme }) => theme.primaryDark},
+    ${({ theme }) => theme.secondaryDark}
   );
 `
 
@@ -91,11 +88,11 @@ const CardBody = styled.div`
   ul {
     list-style: none;
     width: 100%;
-    height:100%;
+    height: 100%;
     margin: 0 auto;
-    display:flex;
-    align-items:center;
-    flex-direction:column;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
     li {
       text-align: center;
@@ -104,7 +101,7 @@ const CardBody = styled.div`
 
       &:not(:last-child) {
         border-bottom: 1px solid lightgray;
-        width:80%;
+        width: 80%;
       }
     }
   }
@@ -116,7 +113,9 @@ export default function TwoSidedCard(props) {
       <CardSide className="front">
         <CardImage>&nbsp;</CardImage>
         <CardTitle>
-          <CardTitleBackground>¿Quién sos en Game Of Thrones?</CardTitleBackground>
+          <CardTitleBackground>
+            ¿Quién sos en Game Of Thrones?
+          </CardTitleBackground>
         </CardTitle>
         <CardBody>
           <ul>
