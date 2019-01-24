@@ -1,21 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export default function HeaderTitles() {
+export default function HeaderTitles(props) {
   const TitleAndSubtitleContainer = styled.div`
     .title {
       letter-spacing: 4px;
-      font-size: 16rem;
-      padding-bottom: 2rem;
+      font-size: 12rem;
     }
 
     .subtitle {
       text-transform: uppercase;
-      font-size: 2.6rem;
-      letter-spacing: 3rem;
+      font-size: 2.2rem;
+      letter-spacing: 2.3rem;
       position: relative;
-      left: 2rem;
-      margin-bottom: 2rem;
+      left: 1.7rem;
+      padding-top: 1.5rem;
     }
   `
   return (

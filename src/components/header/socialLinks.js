@@ -10,9 +10,10 @@ import twitter from '../../images/twitter.svg'
 const Container = styled.div`
   .image-container {
     height: 100%;
-    width: 33%;
+    width: 200px;
     display: inline-flex;
     justify-content: space-around;
+    transform: scale(1.1);
   }
 
   .image-social:hover {
@@ -27,9 +28,15 @@ export default function SocialLinks() {
   return (
     <Container id="Social-Links">
       <div className="image-container">
-        <img src={github} alt="Github" className="image-social" />
-        <img src={linkedin} alt="Linkeding" className="image-social" />
-        <img src={twitter} alt="Twitter" className="image-social" />
+        <a href="https://github.com/leo10099">
+          <img src={github} alt="Github" className="image-social" />
+        </a>
+        <a href="https://www.linkedin.com/in/leandrohanc/">
+          <img src={linkedin} alt="Linkeding" className="image-social" />{' '}
+        </a>
+        <a href="https://twitter.com/HancLeandro">
+          <img src={twitter} alt="Twitter" className="image-social" />
+        </a>
       </div>
     </Container>
   )

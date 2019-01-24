@@ -8,10 +8,9 @@ const Button = styled.a`
     text-transform: uppercase;
     text-decoration: none;
     text-shadow: none;
-    padding: 1.5rem 4rem;
+    padding: 1.5rem 3.5rem;
     display: block;
     width: 50%;
-    margin: 6rem auto auto auto;
     border-radius: 4rem;
     transition: all 0.2s;
     position: relative;
