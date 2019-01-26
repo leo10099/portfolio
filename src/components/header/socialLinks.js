@@ -3,8 +3,11 @@ import styled from 'styled-components'
 
 // SVG Images
 
+// @ts-ignore
 import github from '../../images/github.svg'
+// @ts-ignore
 import linkedin from '../../images/linkedin.svg'
+// @ts-ignore
 import twitter from '../../images/twitter.svg'
 
 const Container = styled.div`
