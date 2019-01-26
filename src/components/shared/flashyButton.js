@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import mq from '../../components/shared/mediaQueries'
 
 const Button = styled.a`
   &,
@@ -9,15 +10,19 @@ const Button = styled.a`
     text-decoration: none;
     text-shadow: none;
     padding: 1.5rem 3.5rem;
+
     display: block;
     width: 50%;
+    ${mq.phone`width: 66%;`}
     border-radius: 4rem;
     transition: all 0.2s;
     position: relative;
     font-size: ${({ fontSize }) => fontSize};
     opacity: 0.85;
     letter-spacing: 4px;
-    font-weight: bold;
+    ${mq.phone`letter-spacing:3px;`}
+    font-weight: 500;
+    color: white;
 
     border: none;
     cursor: pointer;

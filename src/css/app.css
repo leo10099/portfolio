@@ -48,8 +48,10 @@ html {
   font-size: 62.5%;
 }
 
-body {
-  padding: 3rem;
+@media all and (min-width: 800px) {
+  body {
+    padding: 3rem;
+  }
 }
 
 *,

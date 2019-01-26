@@ -11,11 +11,13 @@ import linkedin from '../../images/linkedin.svg'
 import twitter from '../../images/twitter.svg'
 
 const Container = styled.div`
+  width: 50%;
+
   .image-container {
     height: 100%;
-    width: 200px;
+    width: 100%;
     display: inline-flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     transform: scale(1.1);
   }
 
@@ -29,7 +31,7 @@ const Container = styled.div`
 
 export default function SocialLinks() {
   return (
-    <Container id="Social-Links">
+    <Container>
       <div className="image-container">
         <a href="https://github.com/leo10099">
           <img src={github} alt="Github" className="image-social" />

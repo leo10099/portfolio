@@ -1,11 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import mq from '../../components/shared/mediaQueries'
+
 import HeaderTittles from '../header/headerTitles'
 import SocialLinks from '../header/socialLinks'
 import FlashyButton from '../shared/flashyButton'
 import FlexCenter from '../shared/mixins/flexCenter'
-import AbsoluteCenter from '../shared/mixins/absoluteCenter'
 
 const HeaderContainer = styled.div`
   ${FlexCenter()}
@@ -32,7 +31,7 @@ export default () => {
       <HeaderContent>
         <HeaderTittles />
         <SocialLinks />
-        <FlashyButton fontSize={'1.2rem'}>Get in touch</FlashyButton>
+        <FlashyButton fontSize={'1.3rem'}>Get in touch</FlashyButton>
       </HeaderContent>
     </HeaderContainer>
   )

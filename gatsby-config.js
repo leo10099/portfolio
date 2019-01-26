@@ -13,8 +13,8 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -37,13 +37,16 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         custom: {
-          families: ["TheWoodlands"],
-          urls: `fonts.css`
+          families: ['TheWoodlands'],
+          urls: `fonts.css`,
         },
         google: {
-          families: ['Open Sans: 300,400,500,700,900', 'Lato: 300,400,500,700,900']
-        }
-      }
-    }
+          families: [
+            'Open Sans: 300,400,500,700,900',
+            'Lato: 300,400,500,700,900',
+          ],
+        },
+      },
+    },
   ],
 }
