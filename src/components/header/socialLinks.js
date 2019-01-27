@@ -9,8 +9,10 @@ import github from '../../images/github.svg'
 import linkedin from '../../images/linkedin.svg'
 // @ts-ignore
 import twitter from '../../images/twitter.svg'
+import landscape from '../shared/mixins/orientationLandscape'
 
 const Container = styled.div`
+  ${landscape.tablet`padding-bottom: 2rem`}
   width: 50%;
 
   .image-container {
@@ -26,6 +28,7 @@ const Container = styled.div`
     transform: rotate(360deg);
     transform: rotate(1turn) scale3d(1.4, 1.4, 1.4);
     cursor: pointer;
+    backface-visibility: 'hidden';
   }
 `
 

@@ -12,7 +12,7 @@ const ClippedBackground = props => (
         desktop: file(relativePath: { eq: "bg-landing.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1920) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }

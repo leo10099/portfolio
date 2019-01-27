@@ -3,6 +3,7 @@ export default {
   primaryDark: 'rgba(41,152,255,0.85)',
   secondary: '#5643fa',
   secondaryDark: 'rgba(86,67,250,0.85)',
+  light: '#f7f7f7',
   light1: '#ebebeb',
   light2: '#dfdfdf',
   dark: '#888',

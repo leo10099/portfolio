@@ -5,9 +5,11 @@ import HeaderContent from '../components/header/headerContent'
 
 const HeaderPage = () => {
   return (
-    <ClippedBackground className={'clipped-background'}>
-      <HeaderContent />
-    </ClippedBackground>
+    <section id="Header">
+      <ClippedBackground className={'clipped-background'}>
+        <HeaderContent />
+      </ClippedBackground>
+    </section>
   )
 }
 

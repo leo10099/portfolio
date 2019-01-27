@@ -1,9 +1,10 @@
 import React from 'react'
 
 import '../css/app.css'
-import Header from '../pages/header'
 import SEO from '../components/seo'
 import GlobalStyles from '../components/globalStyles'
+import Header from '../pages/header'
+import About from '../pages/about'
 import { ThemeProvider } from 'styled-components'
 import theme from '../components/shared/theme'
 
@@ -12,12 +13,12 @@ const Layout = () => (
     <>
       <SEO
         keywords={['Leandro, Hanc,Web,Developer, Desarrolador']}
-        lang={['es', 'en']}
         description={'Leandro Hanc - Web Developer Portfolio'}
         title={'Leandro Hanc - Portfolio'}
       />
       <GlobalStyles />
       <Header />
+      <About />
     </>
   </ThemeProvider>
 )

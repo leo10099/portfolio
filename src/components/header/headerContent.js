@@ -5,10 +5,14 @@ import HeaderTittles from '../header/headerTitles'
 import SocialLinks from '../header/socialLinks'
 import FlashyButton from '../shared/flashyButton'
 import FlexCenter from '../shared/mixins/flexCenter'
+import landscape from '../shared/mixins/orientationLandscape'
 
 const HeaderContainer = styled.div`
   ${FlexCenter()}
   height: 95vh;
+  ${landscape.desktop`
+  top: -2.5rem
+  `}
   position: relative;
 `
 

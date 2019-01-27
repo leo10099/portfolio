@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import mq from '../../components/shared/mediaQueries'
+import mq from '../../components/shared/mixins/mediaQueries'
+import landscape from '../shared/mixins/orientationLandscape'
 
 const Button = styled.a`
   &,
@@ -10,10 +11,12 @@ const Button = styled.a`
     text-decoration: none;
     text-shadow: none;
     padding: 1.5rem 3.5rem;
+    ${landscape.tablet`padding: 1rem 2.6rem`}
 
     display: block;
     width: 50%;
     ${mq.phone`width: 66%;`}
+    ${landscape.tablet`width: 100%;`}
     border-radius: 4rem;
     transition: all 0.2s;
     position: relative;
