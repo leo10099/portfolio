@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
 
-import HeaderTittles from '../header/headerTitles'
+import HeaderTitles from '../header/headerTitles'
 import SocialLinks from '../header/socialLinks'
 import FlashyButton from '../shared/flashyButton'
 import FlexCenter from '../shared/mixins/flexCenter'
 import landscape from '../shared/mixins/orientationLandscape'
+import LocaleContext from '../shared/localeContext'
+
+import { ES_CALL_TO_ACTION } from '../../locales/es.json'
+import { EN_CALL_TO_ACTION } from '../../locales/en.json'
 
 const HeaderContainer = styled.div`
   ${FlexCenter()}
@@ -29,13 +33,22 @@ const HeaderContent = styled.div`
     color: ${({ theme }) => theme.primary};
   }
 `
+
 export default () => {
   return (
     <HeaderContainer>
       <HeaderContent>
-        <HeaderTittles />
+        <HeaderTitles />
         <SocialLinks />
-        <FlashyButton fontSize={'1.3rem'}>Get in touch</FlashyButton>
+        <LocaleContext.Consumer>
+          {({ locale }) => (
+            <>
+              <FlashyButton fontSize={'1.3rem'}>
+                {locale === 'es' ? ES_CALL_TO_ACTION : EN_CALL_TO_ACTION}
+              </FlashyButton>
+            </>
+          )}
+        </LocaleContext.Consumer>
       </HeaderContent>
     </HeaderContainer>
   )
