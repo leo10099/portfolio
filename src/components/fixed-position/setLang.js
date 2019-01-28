@@ -37,13 +37,13 @@ const LangToggleContainer = styled.div`
 export default function LangToggle() {
   return (
     <LocaleContext.Consumer>
-      {({ toggleLocale }) => (
+      {({ setLocale }) => (
         <LangToggleContainer>
-          <a className="idioma" onClick={toggleLocale}>
+          <a className="idioma" onClick={() => setLocale('es')}>
             es
           </a>
           <strong>|</strong>
-          <a className="idioma" onClick={toggleLocale}>
+          <a className="idioma" onClick={() => setLocale('en')}>
             en
           </a>
         </LangToggleContainer>

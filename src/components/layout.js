@@ -8,7 +8,7 @@ import Header from '../pages/header'
 import About from '../pages/about'
 import { ThemeProvider } from 'styled-components'
 import theme from '../components/shared/theme'
-import LangToggler from '../components/fixed-position/langToggle'
+import SetLang from '../components/fixed-position/setLang'
 
 import LocaleProvider from '../components/shared/localeContextProvider'
 
@@ -27,7 +27,7 @@ export default class Layout extends Component {
             <>
               <Header />
               <About />
-              <LangToggler />
+              <SetLang />
             </>
           </LocaleProvider>
         </>

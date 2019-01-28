@@ -2,15 +2,15 @@ import React, { Component } from 'react'
 import LocaleContext from './localeContext'
 
 class LocaleProvider extends Component {
-  toggleLocale = () => {
+  setLocale = lang => {
     this.setState({
-      locale: this.state.locale === 'en' ? 'es' : 'en',
+      locale: lang,
     })
   }
 
   state = {
     locale: 'en',
-    toggleLocale: this.toggleLocale,
+    setLocale: this.setLocale,
   }
   render() {
     return (
