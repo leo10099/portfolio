@@ -14,7 +14,10 @@ class LocaleProvider extends Component {
   }
   render() {
     return (
-      <LocaleContext.Provider value={this.state}>
+      <LocaleContext.Provider
+        // @ts-ignore
+        value={this.state}
+      >
         {this.props.children}
       </LocaleContext.Provider>
     )

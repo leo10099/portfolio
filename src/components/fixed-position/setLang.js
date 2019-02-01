@@ -9,7 +9,8 @@ const LangToggleContainer = styled.div`
   bottom: 1.5rem;
   color: ${({ theme }) => theme.shadow};
   font-size: 1.6rem;
-  ${mq.tablet`font-size:1.3rem`}
+  ${// @ts-ignore
+  mq.tablet`font-size:1.3rem`}
 
   font-family: 'Open Sans';
 
@@ -37,7 +38,10 @@ const LangToggleContainer = styled.div`
 export default function LangToggle() {
   return (
     <LocaleContext.Consumer>
-      {({ setLocale }) => (
+      {({
+        // @ts-ignore
+        setLocale,
+      }) => (
         <LangToggleContainer>
           <a className="idioma" onClick={() => setLocale('es')}>
             es

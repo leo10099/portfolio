@@ -7,6 +7,9 @@ export default {
   light1: '#ebebeb',
   light2: '#dfdfdf',
   dark: '#888',
+  dark2: '#484848',
+  dark3: '#373737',
+  black: '#252525',
   danger: '#db5461',
   shadow1: '0rem 1.5rem 4rem rgba(0,0,0,.15)',
 }
