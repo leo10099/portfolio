@@ -14,7 +14,7 @@ const TextContainer = styled.div`
     ${// @ts-ignore
     mq.phone`font-size: 2rem;
     font-weight: bolder;
-    line-height: 5rem;
+    
     `}
 
     margin: 1rem auto;

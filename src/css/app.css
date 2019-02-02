@@ -92,3 +92,17 @@ th {
 .cursive {
   font-family: 'TheWoodlands';
 }
+
+.fade-in {
+  transition: all 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.fade-in-start {
+  opacity: 0;
+  margin-left: 100px;
+}
+.fade-in-end {
+  margin-left: 0;
+  opacity: 1;
+}

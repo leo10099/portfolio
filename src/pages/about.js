@@ -14,24 +14,24 @@ export default function AboutPage() {
       <Controller>
         <Scene
           duration={300}
-          triggerElement="#About"
-          classToggle="reveal"
-          triggerHook={'0.9'}
-          offset="40"
+          classToggle={['.fade-in.fade-in-start', 'fade-in-start']}
+          triggerHook={'onEnter'}
+          indicators={true}
+          offset="-130"
         >
           <AboutMeContainer>
-            <AboutMeCard>
-              <AboutMeTextContainer>
-                <>
-                  <BackgroundText>about</BackgroundText>
+            <div className="fade-in fade-in-start">
+              <AboutMeCard>
+                <AboutMeTextContainer>
                   <Divider />
                   <AboutMeText />
-                </>
-              </AboutMeTextContainer>
-              <AboutMeProfilePicContainer>
-                <ProfilePicture />
-              </AboutMeProfilePicContainer>
-            </AboutMeCard>
+                </AboutMeTextContainer>
+                <AboutMeProfilePicContainer>
+                  <ProfilePicture />
+                </AboutMeProfilePicContainer>
+              </AboutMeCard>
+            </div>
+            <BackgroundText>about</BackgroundText>
           </AboutMeContainer>
         </Scene>
       </Controller>
@@ -42,6 +42,7 @@ export default function AboutPage() {
 const About = styled.section`
   ${flexCenter()}
   background: ${({ theme }) => theme.light};
+  transition: all 2s ease;
 
   height: 85vh;
   ${
@@ -50,12 +51,7 @@ const About = styled.section`
     margin: -16rem auto;
     `
   }
-  
-  .reveal {
-    opacity: 0 !important;
-    transition: all 1s ease;
-    
-  }
+
   margin-top: -16rem;
 
 `
