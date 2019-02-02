@@ -9,8 +9,7 @@ const LangToggleContainer = styled.div`
   bottom: 1.5rem;
   color: ${({ theme }) => theme.shadow};
   font-size: 1.6rem;
-  ${// @ts-ignore
-  mq.tablet`font-size:1.3rem`}
+  ${mq.tablet`font-size:1.3rem`}
 
   font-family: 'Open Sans';
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Controller, Scene } from 'react-scrollmagic'
 import mq from '../components/shared/mixins/mediaQueries'
 import ProfilePicture from '../components/about-me/profilePicture'
 import AboutMeText from '../components/about-me/aboutMeText'
@@ -7,10 +8,41 @@ import Divider from '../components/shared/divider'
 import BackgroundText from '../components/shared/backgroundSectionTitle'
 import flexCenter from '../components/shared/mixins/flexCenter'
 
+export default function AboutPage() {
+  return (
+    <About id="About">
+      <Controller>
+        <Scene
+          indicators={true}
+          duration={150}
+          triggerHook="onEnter"
+          classToggle="reveal"
+          offset="-10"
+        >
+          <AboutMeContainer>
+            <AboutMeCard>
+              <AboutMeTextContainer>
+                <>
+                  <BackgroundText>about</BackgroundText>
+                  <Divider />
+                  <AboutMeText />
+                </>
+              </AboutMeTextContainer>
+              <AboutMeProfilePicContainer>
+                <ProfilePicture />
+              </AboutMeProfilePicContainer>
+            </AboutMeCard>
+          </AboutMeContainer>
+        </Scene>
+      </Controller>
+    </About>
+  )
+}
+
 const About = styled.section`
   ${flexCenter()}
   background: ${({ theme }) => theme.light};
-   
+
   height: 85vh;
   ${
     // @ts-ignore
@@ -18,7 +50,13 @@ const About = styled.section`
     margin: -16rem auto;
     `
   }
+  .reveal {
+    opacity: 0;
+    transition: all 0.3s linear;
+    transform:translateX(70px)
+  }
   margin-top: -16rem;
+
 `
 const AboutMeContainer = styled.div`
   margin-top: 16rem;
@@ -26,6 +64,7 @@ const AboutMeContainer = styled.div`
   position: relative;
   z-index: 10;
   ${mq.tablet`width :100%`}
+  transition: all 1s ease-out;
   flex-wrap: wrap;
 `
 
@@ -66,24 +105,3 @@ const AboutMeProfilePicContainer = styled.div`
     flex-wrap: wrap;
   }
 `
-
-export default function AboutPage() {
-  return (
-    <About id="About">
-      <AboutMeContainer>
-        <AboutMeCard>
-          <AboutMeTextContainer>
-            <>
-              <BackgroundText>about</BackgroundText>
-              <Divider />
-              <AboutMeText />
-            </>
-          </AboutMeTextContainer>
-          <AboutMeProfilePicContainer>
-            <ProfilePicture />
-          </AboutMeProfilePicContainer>
-        </AboutMeCard>
-      </AboutMeContainer>
-    </About>
-  )
-}
