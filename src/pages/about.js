@@ -13,11 +13,11 @@ export default function AboutPage() {
     <About id="About">
       <Controller>
         <Scene
-          indicators={true}
-          duration={150}
-          triggerHook="onEnter"
+          duration={300}
+          triggerElement="#About"
           classToggle="reveal"
-          offset="-10"
+          triggerHook={'0.9'}
+          offset="40"
         >
           <AboutMeContainer>
             <AboutMeCard>
@@ -50,10 +50,11 @@ const About = styled.section`
     margin: -16rem auto;
     `
   }
+  
   .reveal {
-    opacity: 0;
-    transition: all 0.3s linear;
-    transform:translateX(70px)
+    opacity: 0 !important;
+    transition: all 1s ease;
+    
   }
   margin-top: -16rem;
 
