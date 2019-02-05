@@ -5,6 +5,7 @@ import mq from '../../components/shared/mixins/mediaQueries'
 
 const LangToggleContainer = styled.div`
   position: fixed;
+  z-index: 100;
   right: 3vw;
   bottom: 1.5rem;
   color: ${({ theme }) => theme.shadow};
