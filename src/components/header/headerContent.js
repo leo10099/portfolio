@@ -5,16 +5,16 @@ import HeaderTitles from '../header/headerTitles'
 import SocialLinks from '../header/socialLinks'
 import FlashyButton from '../shared/flashyButton'
 import FlexCenter from '../shared/mixins/flexCenter'
-import landscape from '../shared/mixins/orientationLandscape'
-import LocaleContext from '../shared/localeContext'
+import Landscape from '../shared/mixins/orientationLandscape'
 
+import LocaleContext from '../shared/localeContext'
 import { ES_CALL_TO_ACTION } from '../../locales/es.json'
 import { EN_CALL_TO_ACTION } from '../../locales/en.json'
 
 const HeaderContainer = styled.div`
   ${FlexCenter()}
   height: 95vh;
-  ${landscape.desktop`
+  ${Landscape.desktop`
   top: -2.5rem
   `}
   position: relative;

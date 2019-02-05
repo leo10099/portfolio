@@ -41,7 +41,6 @@ const Button = styled.a`
 
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem rgba(black, 0.2);
 
     &::after {
       transform: scaleX(1.4) scaleY(1.6);

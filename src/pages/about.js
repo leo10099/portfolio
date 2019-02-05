@@ -11,30 +11,29 @@ import flexCenter from '../components/shared/mixins/flexCenter'
 export default function AboutPage() {
   return (
     <About id="About">
-      <Controller>
-        <Scene
-          duration={300}
-          classToggle={['.fade-in.fade-in-start', 'fade-in-start']}
-          triggerHook={'onEnter'}
-          indicators={true}
-          offset="-130"
-        >
-          <AboutMeContainer>
-            <div className="fade-in fade-in-start">
-              <AboutMeCard>
-                <AboutMeTextContainer>
+      <AboutMeContainer>
+        <AboutMeCard>
+          <AboutMeTextContainer>
+            <Controller>
+              <Scene
+                duration={300}
+                classToggle={['.fade', 'fade-in-from-bottom']}
+                triggerHook={'onEnter'}
+                offset="-130"
+              >
+                <div className="fade fade-in-from-bottom">
                   <Divider />
                   <AboutMeText />
-                </AboutMeTextContainer>
-                <AboutMeProfilePicContainer>
-                  <ProfilePicture />
-                </AboutMeProfilePicContainer>
-              </AboutMeCard>
-            </div>
-            <BackgroundText>about</BackgroundText>
-          </AboutMeContainer>
-        </Scene>
-      </Controller>
+                </div>
+              </Scene>
+            </Controller>
+          </AboutMeTextContainer>
+          <AboutMeProfilePicContainer>
+            <ProfilePicture />
+          </AboutMeProfilePicContainer>
+        </AboutMeCard>
+        <BackgroundText>about</BackgroundText>
+      </AboutMeContainer>
     </About>
   )
 }
@@ -47,7 +46,7 @@ const About = styled.section`
   height: 85vh;
   ${
     // @ts-ignore
-    mq.phone`height :100%
+    mq.phone`height: 100%
     margin: -16rem auto;
     `
   }
