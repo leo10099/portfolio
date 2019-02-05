@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import ClippedBackground from '../components/shared/clippedBackground'
 import { Controller, Scene } from 'react-scrollmagic'
 import mq from '../components/shared/mixins/mediaQueries'
 import ProfilePicture from '../components/about-me/profilePicture'
@@ -11,6 +12,7 @@ import flexCenter from '../components/shared/mixins/flexCenter'
 export default function AboutPage() {
   return (
     <About id="About">
+
       <AboutMeContainer>
         <AboutMeCard>
           <AboutMeTextContainer>
@@ -34,6 +36,7 @@ export default function AboutPage() {
         </AboutMeCard>
         <BackgroundText>about</BackgroundText>
       </AboutMeContainer>
+ 
     </About>
   )
 }

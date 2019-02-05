@@ -4,11 +4,12 @@ import styled from 'styled-components'
 // SVG Images
 
 // @ts-ignore
-import github from '../../images/github.svg'
+import github from '../../images/social/github.svg'
 // @ts-ignore
-import linkedin from '../../images/linkedin.svg'
+import linkedin from '../../images/social/linkedin.svg'
 // @ts-ignore
-import twitter from '../../images/twitter.svg'
+import twitter from '../../images/social/twitter.svg'
+
 import landscape from '../shared/mixins/orientationLandscape'
 
 const Container = styled.div`
