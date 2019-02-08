@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import ClippedBackground from '../components/shared/clippedBackground'
 import { Controller, Scene } from 'react-scrollmagic'
 import mq from '../components/shared/mixins/mediaQueries'
 import ProfilePicture from '../components/about-me/profilePicture'
@@ -12,7 +11,6 @@ import flexCenter from '../components/shared/mixins/flexCenter'
 export default function AboutPage() {
   return (
     <About id="About">
-
       <AboutMeContainer>
         <AboutMeCard>
           <AboutMeTextContainer>
@@ -36,7 +34,6 @@ export default function AboutPage() {
         </AboutMeCard>
         <BackgroundText>about</BackgroundText>
       </AboutMeContainer>
- 
     </About>
   )
 }
@@ -44,25 +41,31 @@ export default function AboutPage() {
 const About = styled.section`
   ${flexCenter()}
   background: ${({ theme }) => theme.light};
-  transition: all 2s ease;
+  transition: 2s ease;
 
-  height: 85vh;
+  height: 110vh;
+  margin-top: -16rem;
+
   ${
     // @ts-ignore
-    mq.phone`height: 100%
-    margin: -16rem auto;
+    mq.phone`
+    height:180vh;
+    margin-top:-10rem;
     `
   }
 
-  margin-top: -16rem;
 
 `
 const AboutMeContainer = styled.div`
-  margin-top: 16rem;
   width: 80%;
   position: relative;
   z-index: 10;
-  ${mq.tablet`width :100%`}
+  ${// @ts-ignore
+  mq.phone`
+    width: 90%;
+    height:100%;
+    top: 10rem;
+    `}
   transition: all 1s ease-out;
   flex-wrap: wrap;
 `

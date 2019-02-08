@@ -81,11 +81,21 @@ th {
   text-align: left;
 }
 
-.clipped-background {
+.clipped-background-header {
   min-height: 95vh;
 
   background-size: cover;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.clipped-background-skills {
+  height: 100vh;
+  background-color: #484848;
+  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
+  margin-top: -16rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* HELPER CLASSSES */
