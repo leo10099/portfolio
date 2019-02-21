@@ -15,7 +15,7 @@ const BackgroundText = styled.div`
     `}
   z-index: -1;
   color: ${props => props.color};
-  font-size: 30vw;
+  font-size: 33vw;
   width: 100vw;
   opacity: ${props => props.opacity};
   line-height: 0.8;

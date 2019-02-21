@@ -41,7 +41,7 @@ export default function Skills() {
           <SkillGroups />
           <BackgroundTitle
             color={'#1E1E1E'}
-            opacity={0.07}
+            opacity={0.1}
             yPositionOffset={'50%'}
           >
             skills
