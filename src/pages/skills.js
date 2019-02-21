@@ -2,10 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 import flexCenter from '../components/shared/mixins/flexCenter'
 import SkillGroups from '../components/skills/skillGroups'
+import BackgroundTitle from '../components/shared/backgroundSectionTitle'
 import mq from '../components/shared/mixins/mediaQueries'
 
 const SkillsContainer = styled.div`
   min-height: 95vh;
+  z-index: 11;
+  position: relative;
 `
 const SkillsSvgContainer = styled.div`
   ${flexCenter()};
@@ -30,6 +33,13 @@ export default function Skills() {
       <SkillsContainer className="clipped-background-skills">
         <SkillsSvgContainer>
           <SkillGroups />
+          <BackgroundTitle
+            color={'#1E1E1E'}
+            opacity={0.07}
+            yPositionOffset={'50%'}
+          >
+            skills
+          </BackgroundTitle>
         </SkillsSvgContainer>
       </SkillsContainer>
     </section>

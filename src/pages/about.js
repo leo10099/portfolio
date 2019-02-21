@@ -33,7 +33,9 @@ export default function AboutPage() {
             <ProfilePicture />
           </AboutMeProfilePicContainer>
         </AboutMeCard>
-        <BackgroundText>about</BackgroundText>
+        <BackgroundText color={'grey'} opacity={'0.07'} yPositionOffset={'20%'}>
+          about
+        </BackgroundText>
       </AboutMeContainer>
     </About>
   )
@@ -67,7 +69,6 @@ const AboutMeContainer = styled.div`
     height:100%;
     top: 10rem;
     `}
-  transition: all 1s ease-out;
   flex-wrap: wrap;
 `
 

@@ -11,13 +11,13 @@ const BackgroundText = styled.div`
   ${AbsoluteCenter()};
   ${// @ts-ignore
   mq.phone`
-    top:20%;
+    top:${props => props.offset};
     `}
   z-index: -1;
-  color: grey;
+  color: ${props => props.color};
   font-size: 30vw;
   width: 100vw;
-  opacity: 0.07;
+  opacity: ${props => props.opacity};
   line-height: 0.8;
   width: 100%;
   font-family: 'Lato';
@@ -28,7 +28,13 @@ const BackgroundText = styled.div`
 export default function backgroundSectionTitle(props) {
   return (
     <BackgroundTextContainer>
-      <BackgroundText>{props.children}</BackgroundText>
+      <BackgroundText
+        color={props.color}
+        opacity={props.opacity}
+        offset={props.yPositionOffset}
+      >
+        {props.children}
+      </BackgroundText>
     </BackgroundTextContainer>
   )
 }
