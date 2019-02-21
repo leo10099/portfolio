@@ -4,11 +4,16 @@ import flexCenter from '../components/shared/mixins/flexCenter'
 import SkillGroups from '../components/skills/skillGroups'
 import BackgroundTitle from '../components/shared/backgroundSectionTitle'
 import mq from '../components/shared/mixins/mediaQueries'
+import Landscape from '../components/shared/mixins/orientationLandscape'
 
 const SkillsContainer = styled.div`
   min-height: 95vh;
   z-index: 11;
   position: relative;
+
+  ${Landscape.phone`
+  min-height: 120vh
+  `}
 `
 const SkillsSvgContainer = styled.div`
   ${flexCenter()};
@@ -16,6 +21,7 @@ const SkillsSvgContainer = styled.div`
   height: 75%;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-top: 16rem;
 
   ${// @ts-ignore
   mq.phone`

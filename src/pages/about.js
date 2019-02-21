@@ -44,7 +44,7 @@ export default function AboutPage() {
 const About = styled.section`
   ${flexCenter()}
   background: ${({ theme }) => theme.light};
-  transition: 2s ease;
+
 
   height: 110vh;
   margin-top: -16rem;
