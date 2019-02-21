@@ -20,6 +20,7 @@ export default function AboutPage() {
                 classToggle={['.fade', 'fade-in-from-bottom']}
                 triggerHook={'onEnter'}
                 offset="-130"
+                reverse={false}
               >
                 <div className="fade fade-in-from-bottom">
                   <Divider />

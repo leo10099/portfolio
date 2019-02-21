@@ -1,0 +1,167 @@
+pre code {
+  font-size: 16px;
+  overflow-y: auto;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #333333;
+  background: #f8f8f8;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #998998;
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-subst {
+  color: #333333;
+  font-weight: bold;
+}
+
+.hljs-number,
+.hljs-literal,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag .hljs-attr {
+  color: #008080;
+}
+
+.hljs-string,
+.hljs-doctag {
+  color: #d14d14;
+}
+
+.hljs-title,
+.hljs-section,
+.hljs-selector-id {
+  color: #900900;
+  font-weight: bold;
+}
+
+.hljs-subst {
+  font-weight: normal;
+}
+
+.hljs-type,
+.hljs-class .hljs-title {
+  color: #458458;
+  font-weight: bold;
+}
+
+.hljs-tag,
+.hljs-name,
+.hljs-attribute {
+  color: #000080;
+  font-weight: normal;
+}
+
+.hljs-regexp,
+.hljs-link {
+  color: #009926;
+}
+
+.hljs-symbol,
+.hljs-bullet {
+  color: #990073;
+}
+
+.hljs-built_in,
+.hljs-builtin-name {
+  color: #0086b3;
+}
+
+.hljs-meta {
+  color: #999999;
+  font-weight: bold;
+}
+
+.hljs-deletion {
+  background: #fddfdd;
+}
+
+.hljs-addition {
+  background: #dfddfd;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+
+/* make the heart beat */
+.beat {
+	animation: beat .25s infinite alternate;
+	transform-origin: center;
+}
+
+/* Heart beat animation */
+@keyframes beat{
+	to { transform: scale(1.4); }
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a {
+  color: transparent;
+  float: left;
+  margin-left: -20px;
+  line-height: 1;
+}
+
+
+h1:hover a,
+h2:hover a,
+h3:hover a,
+h4:hover a,
+h5:hover a {
+  display: table;
+  color: #AAA;
+}
+
+.content a .fa {
+  vertical-align: middle;
+}
+
+html {
+  overflow-y: auto;
+}
+
+.top-nav {
+  border-bottom: 1px solid #EEE;
+}
+
+@media(min-width: 1010px) {
+  .top-nav {
+    position: fixed;
+    width: 100%;
+    margin: 10px 0 5px 0;
+  }
+
+  .aside {
+    position: fixed;
+  }
+
+  .content-container {
+    padding-top: 10px;
+  }
+
+  .doc-content {
+    margin-top: 16px;
+  }
+}
+
+.fa-spin {
+  animation: fa-spin 1s cubic-bezier(0.37, -0.48, 0.21, 1.25);
+}
