@@ -18,29 +18,27 @@ const SkillGroup = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   text-align: center;
   color: ${({ theme }) => theme.light2};
   font-family: 'Lato';
+  height: 25vh;
 
   ${// @ts-ignore
   mq.phone`
   justify-content: center;
-    `}
-
-  span {
+    `} span {
     font-size: 1vw;
     ${// @ts-ignore
     mq.phone`
     font-size: 1.2rem
-    margin-bottom: 2rem;
     `}
   }
 
   img {
     height: 10vh;
     width: 10vw;
-    margin-bottom: 4rem;
+
     ${// @ts-ignore
     mq.phone`
    margin-bottom: 2rem;
@@ -124,7 +122,11 @@ export default function SkillGroups() {
             <SkillGroup>
               <img src={react} className="animated skills skills-1" />
               <span className="animated skills skills-1">REACT</span>
-              <Divider width={'3.33vh'} margin={'1rem auto'} />
+              <Divider
+                className="animated skills skills-1"
+                width={'3.33vh'}
+                margin={'1rem auto'}
+              />
             </SkillGroup>
             <SkillGroup>
               <img src={vue} className="animated skills skills-2" />
