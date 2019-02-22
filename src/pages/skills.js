@@ -21,7 +21,7 @@ const SkillsSvgContainer = styled.div`
   height: 75%;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 16rem;
+  margin-top: 10rem;
 
   ${// @ts-ignore
   mq.phone`
@@ -35,7 +35,7 @@ const SkillsSvgContainer = styled.div`
 
 export default function Skills() {
   return (
-    <section id="skills">
+    <section id="Skills">
       <SkillsContainer className="clipped-background-skills">
         <SkillsSvgContainer>
           <SkillGroups />

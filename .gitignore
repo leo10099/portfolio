@@ -1,6 +1,9 @@
 #Now
 now.json
 
+#Vscode
+.vscode
+
 # Logs
 logs
 *.log

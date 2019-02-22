@@ -9,13 +9,10 @@ const BackgroundTextContainer = styled.div`
 
 const BackgroundText = styled.div`
   ${AbsoluteCenter()};
-  ${// @ts-ignore
-  mq.phone`
-    top:${props => props.offset};
-    `}
+
   z-index: -1;
   color: ${props => props.color};
-  font-size: 33vw;
+  font-size: 30vw;
   width: 100vw;
   opacity: ${props => props.opacity};
   line-height: 0.8;
@@ -23,6 +20,12 @@ const BackgroundText = styled.div`
   font-family: 'Lato';
   font-weight: bolder;
   text-align: center;
+
+  ${// @ts-ignore
+  mq.phone`
+    top:${props => props.offset};
+    font-size: 35w;
+    `}
 `
 
 export default function backgroundSectionTitle(props) {

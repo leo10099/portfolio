@@ -4,19 +4,17 @@ import LocaleContext from '../shared/localeContext'
 import mq from '../../components/shared/mixins/mediaQueries'
 
 const LangToggleContainer = styled.div`
-  position: fixed;
+  position: absolute;
   z-index: 100;
-  right: 3vw;
-  bottom: 1.5rem;
-  color: ${({ theme }) => theme.shadow};
   font-size: 1.6rem;
   ${mq.tablet`font-size:1.3rem`}
-
   font-family: 'Open Sans';
-
+  right: 3vw;
+  bottom: 1rem;
   a.idioma {
     font-weight: 400;
     cursor: pointer;
+    color: ${({ theme }) => theme.shadow};
   }
 
   a.idioma:hover {

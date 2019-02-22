@@ -123,12 +123,12 @@ export default function SkillGroups() {
               <span className="animated skills skills-1">NODE</span>
             </SkillGroup>
             <SkillGroup>
-              <img src={sql} className="animated skills skills-2" />
-              <span className="animated skills skills-2">MONGO DB</span>
-            </SkillGroup>
-            <SkillGroup>
               <img src={mongo} className="animated skills skills-3" />
               <span className="animated skills skills-3">SQL</span>
+            </SkillGroup>
+            <SkillGroup>
+              <img src={sql} className="animated skills skills-2" />
+              <span className="animated skills skills-2">MONGO DB</span>
             </SkillGroup>
           </>
         </Scene>

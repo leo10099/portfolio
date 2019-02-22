@@ -10,7 +10,7 @@ import { ThemeProvider } from 'styled-components'
 import theme from '../components/shared/theme'
 
 // LOCALES
-import SetLang from '../components/fixed-position/setLang'
+import SetLang from '../components/shared/setLang'
 import LocaleProvider from '../components/shared/localeContextProvider'
 
 // PAGES
