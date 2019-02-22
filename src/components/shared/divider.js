@@ -6,7 +6,8 @@ import mq from '../../components/shared/mixins/mediaQueries'
 const Rule = styled.div`
   display: block;
   height: 3px;
-  width: 230px;
+  width: ${props => props.width || '230px'};
+  margin: ${props => props.margin};
 
   ${
     // @ts-ignore
@@ -23,6 +24,12 @@ const Rule = styled.div`
   margin-right: auto;
   margin-bottom: 4px;
 `
-export default function Divider() {
-  return <Rule />
+export default function Divider(props) {
+  return (
+    <Rule
+      width={props.width}
+      margin={props.margin}
+      className={props.className}
+    />
+  )
 }

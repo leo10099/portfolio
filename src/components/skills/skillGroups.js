@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Controller, Scene } from 'react-scrollmagic'
 import mq from '../../components/shared/mixins/mediaQueries'
+import Divider from '../../components/shared/divider'
 
 import html from '../../images/skills/html-01.svg'
 import css from '../../images/skills/css-01.svg'
@@ -95,40 +96,81 @@ export default function SkillGroups() {
             <SkillGroup>
               <img src={html} className="animated skills skills-1" />
               <span className="animated skills skills-1">HTML</span>
+              <Divider
+                className="animated skills skills-1"
+                width={'3.33vh'}
+                margin={'1rem auto'}
+              />
             </SkillGroup>
             <SkillGroup>
               <img src={css} className="animated skills skills-2" />
               <span className="animated skills skills-2">CSS</span>
+              <Divider
+                className="animated skills skills-2"
+                width={'3.33vh'}
+                margin={'1rem auto'}
+              />
             </SkillGroup>
             <SkillGroup>
               <img src={js} className="animated skills skills-3" />
               <span className="animated skills skills-3">JAVASCRIPT</span>
+              <Divider
+                className="animated skills skills-3"
+                width={'3.33vh'}
+                margin={'1rem auto'}
+              />
             </SkillGroup>
 
             <SkillGroup>
               <img src={react} className="animated skills skills-1" />
               <span className="animated skills skills-1">REACT</span>
+              <Divider width={'3.33vh'} margin={'1rem auto'} />
             </SkillGroup>
             <SkillGroup>
               <img src={vue} className="animated skills skills-2" />
               <span className="animated skills skills-2">VUE</span>
+              <Divider
+                className="animated skills skills-2"
+                width={'3.33vh'}
+                margin={'1rem auto'}
+              />
             </SkillGroup>
             <SkillGroup>
               <img src={sass} className="animated skills skills-3" />
               <span className="animated skills skills-3">SASS</span>
+              <Divider
+                className="animated skills skills-3"
+                width={'3.33vh'}
+                margin={'1rem auto'}
+              />
             </SkillGroup>
 
             <SkillGroup>
               <img src={node} className="animated skills skills-1" />
               <span className="animated skills skills-1">NODE</span>
+              <Divider
+                className="animated skills skills-1"
+                width={'3.33vh'}
+                margin={'1rem auto'}
+              />
             </SkillGroup>
             <SkillGroup>
-              <img src={mongo} className="animated skills skills-3" />
-              <span className="animated skills skills-3">SQL</span>
+              <img src={mongo} className="animated skills skills-2" />
+              <span className="animated skills skills-2">SQL</span>
+              <Divider
+                className="animated skills skills-2"
+                width={'3.33vh'}
+                margin={'1rem auto'}
+              />
             </SkillGroup>
             <SkillGroup>
-              <img src={sql} className="animated skills skills-2" />
-              <span className="animated skills skills-2">MONGO DB</span>
+              <img src={sql} className="animated skills skills-3" />
+              <span className="animated skills skills-3">MONGO DB</span>
+              <Divider
+                className="animated skills skills-3"
+                width={'3.33vh'}
+                margin={'1rem auto'}
+              />
             </SkillGroup>
           </>
         </Scene>
