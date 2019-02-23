@@ -17,6 +17,7 @@ import LocaleProvider from '../components/shared/localeContextProvider'
 import Header from '../pages/header'
 import About from '../pages/about'
 import Skills from '../pages/skills'
+import Projects from '../pages/projects'
 
 export default class Layout extends Component {
   render() {
@@ -34,6 +35,7 @@ export default class Layout extends Component {
               <Header />
               <About />
               <Skills />
+              <Projects />
               <SetLang />
             </>
           </LocaleProvider>
