@@ -67,7 +67,7 @@ const AboutMeContainer = styled.div`
   mq.phone`
     width: 90%;
     height:100%;
-    top: 10rem;
+    top: 15%;
     `}
   flex-wrap: wrap;
 `
