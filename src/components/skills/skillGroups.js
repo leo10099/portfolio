@@ -96,7 +96,7 @@ export default function SkillGroups() {
               <span className="animated skills skills-1">HTML</span>
               <Divider
                 className="animated skills skills-1"
-                width={'3.33vh'}
+                width={'33%'}
                 margin={'1rem auto'}
               />
             </SkillGroup>
@@ -105,7 +105,7 @@ export default function SkillGroups() {
               <span className="animated skills skills-2">CSS</span>
               <Divider
                 className="animated skills skills-2"
-                width={'3.33vh'}
+                width={'33%'}
                 margin={'1rem auto'}
               />
             </SkillGroup>
@@ -114,7 +114,7 @@ export default function SkillGroups() {
               <span className="animated skills skills-3">JAVASCRIPT</span>
               <Divider
                 className="animated skills skills-3"
-                width={'3.33vh'}
+                width={'33%'}
                 margin={'1rem auto'}
               />
             </SkillGroup>
@@ -124,7 +124,7 @@ export default function SkillGroups() {
               <span className="animated skills skills-1">REACT</span>
               <Divider
                 className="animated skills skills-1"
-                width={'3.33vh'}
+                width={'33%'}
                 margin={'1rem auto'}
               />
             </SkillGroup>
@@ -133,7 +133,7 @@ export default function SkillGroups() {
               <span className="animated skills skills-2">VUE</span>
               <Divider
                 className="animated skills skills-2"
-                width={'3.33vh'}
+                width={'33%'}
                 margin={'1rem auto'}
               />
             </SkillGroup>
@@ -142,7 +142,7 @@ export default function SkillGroups() {
               <span className="animated skills skills-3">SASS</span>
               <Divider
                 className="animated skills skills-3"
-                width={'3.33vh'}
+                width={'33%'}
                 margin={'1rem auto'}
               />
             </SkillGroup>
@@ -152,7 +152,7 @@ export default function SkillGroups() {
               <span className="animated skills skills-1">NODE</span>
               <Divider
                 className="animated skills skills-1"
-                width={'3.33vh'}
+                width={'33%'}
                 margin={'1rem auto'}
               />
             </SkillGroup>
@@ -161,7 +161,7 @@ export default function SkillGroups() {
               <span className="animated skills skills-2">SQL</span>
               <Divider
                 className="animated skills skills-2"
-                width={'3.33vh'}
+                width={'33%'}
                 margin={'1rem auto'}
               />
             </SkillGroup>
@@ -170,7 +170,7 @@ export default function SkillGroups() {
               <span className="animated skills skills-3">MONGO DB</span>
               <Divider
                 className="animated skills skills-3"
-                width={'3.33vh'}
+                width={'33%'}
                 margin={'1rem auto'}
               />
             </SkillGroup>
