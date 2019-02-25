@@ -11,7 +11,7 @@ module.exports = {
     {
       fullName: 'Crema de Caramelo Candybar',
       shortName: 'Crema de Caramelo',
-      tech: ['React', 'Styled Components', 'Jest-Enzyme'],
+      tech: ['Node', 'Express', 'React', 'Styled Components'],
       type: 'Freelance',
       url: 'https://test-got.now.sh',
       year: 2018,
@@ -19,7 +19,7 @@ module.exports = {
     {
       name: 'Dev Job Inspector',
       shortName: 'Dev Job Inspector',
-      tech: ['React', 'Styled Components', 'Jest-Enzyme'],
+      tech: ['Node', 'Express', 'PostgreSQL', 'Puppeteer', 'React'],
       type: 'Personal project',
       url: 'https://dev-jobs.now.sh',
       year: 2018,

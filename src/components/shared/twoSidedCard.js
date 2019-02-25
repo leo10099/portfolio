@@ -3,6 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 import mq from '../shared/mixins/mediaQueries'
 import Image from '../../images/code1.jpg'
+import flexCenter from './mixins/flexCenter'
 
 const CardSide = styled.div``
 
@@ -20,7 +21,6 @@ const Card = styled.div`
 
 ${mq.tablet`
   margin: 4rem auto;
-
     `}
 
   ${CardSide} {
@@ -101,28 +101,25 @@ const CardTitleBackground = styled.span`
 `
 
 const CardBody = styled.div`
-  padding: 3rem;
+  padding: 1.5rem;
+  ${flexCenter()}
+  height: 280px;
 
   ul {
     list-style: none;
-    width: 100%;
     height: 100%;
-    margin: 0 auto;
-    display: flex;
-    position: relative;
-    top: 1rem;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    width: 100%;
+    ${flexCenter()}
+    text-align: center;
 
     li {
       text-align: center;
-      font-size: 1.5rem;
-      padding: 2rem;
+      font-size: 1.4rem;
+      padding: 1.8rem;
 
       &:not(:last-child) {
         border-bottom: 1px solid ${({ theme }) => theme.light2};
-        width: 66.6%;
+        width: 50%;
       }
     }
   }
