@@ -1,7 +1,7 @@
 import React from 'react'
 
 import styled from 'styled-components'
-
+import mq from '../shared/mixins/mediaQueries'
 import Image from '../../images/code1.jpg'
 
 const CardSide = styled.div``
@@ -11,6 +11,17 @@ const Card = styled.div`
   position: relative;
   height: 52rem;
   width: 35rem;
+  margin: 4rem auto;
+
+  ${mq.phone`
+  margin: 4rem auto;
+  width: 85vw;
+    `}
+
+${mq.tablet`
+  margin: 4rem auto;
+
+    `}
 
   ${CardSide} {
     height: 52rem;
@@ -26,8 +37,12 @@ const Card = styled.div`
     color: ${({ theme }) => theme.dark} !important;
     position: absolute;
     overflow: hidden;
-    top: 0;
-    left: 0;
+
+    ${mq.phone`
+      width: 85vw;
+      margin-left:auto;
+      margin-right:auto;
+    `}
   }
 
   &:hover .front {

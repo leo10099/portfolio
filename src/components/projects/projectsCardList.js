@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import ProjectsInfo from './projectsInfo'
 import flexCenter from '../../components/shared/mixins/flexCenter'
 import ProjectsCard from './projectCard'
+import mq from '../shared/mixins/mediaQueries'
 
 export default function ProjectsCardList() {
   const { projects } = ProjectsInfo
@@ -14,9 +15,16 @@ export default function ProjectsCardList() {
     flex-direction: row;
     justify-content: space-evenly;
     padding: 4rem;
-    flex-wrap: wrap;
-    width: 100vw;
+    width: 100%;
     height: 100%;
+    flex-wrap: wrap;
+    ${mq.phone`
+    flex-direction: column;
+    display:block;
+    justify-content: center;
+    margin:auto;
+    padding:0;
+    `}
   `
   return (
     <ProjectsCardListContainer>
