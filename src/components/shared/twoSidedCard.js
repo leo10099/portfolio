@@ -137,7 +137,7 @@ export default function TwoSidedCard(props) {
         <CardBody>
           <ul>
             {data.tech && data.tech.length
-              ? data.tech.map(item => <li>{item}</li>)
+              ? data.tech.map((item, index) => <li key={index}>{item}</li>)
               : null}
           </ul>
         </CardBody>

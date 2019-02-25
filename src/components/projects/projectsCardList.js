@@ -29,7 +29,7 @@ export default function ProjectsCardList() {
   return (
     <ProjectsCardListContainer>
       {projects.map(project => {
-        return <ProjectsCard project={project} />
+        return <ProjectsCard project={project} key={project.shortName} />
       })}
     </ProjectsCardListContainer>
   )
