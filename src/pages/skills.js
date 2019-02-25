@@ -24,8 +24,8 @@ const SkillsSvgContainer = styled.div`
   margin-top: 10rem;
 
   ${// @ts-ignore
-  mq.phone`
-    width: 100%;
+  mq.tablet`
+    width: 90%;
     height: 80%;
     flex-direction: row;
     flex-wrap: wrap;

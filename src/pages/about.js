@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Controller, Scene } from 'react-scrollmagic'
 import mq from '../components/shared/mixins/mediaQueries'
+import Landscape from '../components/shared/mixins/orientationLandscape'
 import ProfilePicture from '../components/about-me/profilePicture'
 import AboutMeText from '../components/about-me/aboutMeText'
 import Divider from '../components/shared/divider'
@@ -107,5 +108,8 @@ const AboutMeProfilePicContainer = styled.div`
   & img {
     border-radius: 4px;
     flex-wrap: wrap;
+    ${Landscape.phone`
+  display:none
+  `}
   }
 `
