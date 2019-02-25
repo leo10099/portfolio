@@ -1,7 +1,7 @@
 import React from 'react'
 
 import styled from 'styled-components'
-import Image from '../../images/code0.jpg'
+import Image from '../../images/code1.jpg'
 
 const CardSide = styled.div``
 
