@@ -84,7 +84,7 @@ export default function SkillGroups() {
     <React.Fragment>
       <Controller>
         <Scene
-          duration={1000}
+          duration={2000}
           classToggle={['.animated.skills', 'appear']}
           triggerElement={'.animated.skills'}
           reverse={false}
