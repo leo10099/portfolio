@@ -12,7 +12,7 @@ const BackgroundText = styled.div`
 
   z-index: -1;
   color: ${props => props.color};
-  font-size: 30vw;
+  font-size: ${props => props.fontSize || '30vw'};
   width: 100vw;
   opacity: ${props => props.opacity};
   line-height: 0.8;
@@ -24,7 +24,7 @@ const BackgroundText = styled.div`
   ${// @ts-ignore
   mq.phone`
     top:${props => props.offset};
-    font-size: 35w;
+    font-size:${props => props.fontSizeMobile || '35vw'} ;
     `}
 `
 
@@ -35,6 +35,8 @@ export default function backgroundSectionTitle(props) {
         color={props.color}
         opacity={props.opacity}
         offset={props.yPositionOffset}
+        fontSize={props.fontSize}
+        fontSizePhone={props.fontSizePhone}
       >
         {props.children}
       </BackgroundText>
