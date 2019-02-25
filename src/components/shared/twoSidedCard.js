@@ -1,6 +1,7 @@
 import React from 'react'
 
 import styled from 'styled-components'
+
 import Image from '../../images/code1.jpg'
 
 const CardSide = styled.div``
@@ -10,12 +11,13 @@ const Card = styled.div`
   position: relative;
   height: 52rem;
   width: 35rem;
-  margin: 0 auto;
 
   ${CardSide} {
     height: 52rem;
     width: 35rem;
     backface-visibility: hidden;
+    background: ${({ theme }) => theme.light};
+    opacity: 0.75;
     border-radius: 4px;
     box-shadow: ${({ theme }) => theme.shadow1};
     transition: all 0.8s ease;
@@ -53,7 +55,8 @@ const CardImage = styled.div`
   background-image: linear-gradient(
       to right bottom,
       ${({ theme }) => theme.primary},
-      ${({ theme }) => theme.secondary}
+      ${({ theme }) => theme.secondary},
+      ${({ theme }) => theme.danger}
     ),
     url(${Image});
 `
@@ -63,10 +66,10 @@ const CardTitle = styled.h4`
   text-transform: uppercase;
   color: ${({ theme }) => theme.light2};
   position: absolute;
-  top: 12rem;
+  top: 12.5rem;
   right: 2rem;
   text-align: right;
-  width: 75%;
+  width: 76%;
 `
 const CardTitleBackground = styled.span`
   font-family: 'Lato';
@@ -91,7 +94,10 @@ const CardBody = styled.div`
     height: 100%;
     margin: 0 auto;
     display: flex;
+    position: relative;
+    top: 1rem;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
 
     li {
@@ -100,29 +106,27 @@ const CardBody = styled.div`
       padding: 2rem;
 
       &:not(:last-child) {
-        border-bottom: 1px solid lightgray;
-        width: 80%;
+        border-bottom: 1px solid ${({ theme }) => theme.light2};
+        width: 66.6%;
       }
     }
   }
 `
 
 export default function TwoSidedCard(props) {
+  const { data } = props
   return (
     <Card>
       <CardSide className="front">
         <CardImage>&nbsp;</CardImage>
         <CardTitle>
-          <CardTitleBackground>
-            ¿Quién sos en Game Of Thrones?
-          </CardTitleBackground>
+          <CardTitleBackground>{data.shortName}</CardTitleBackground>
         </CardTitle>
         <CardBody>
           <ul>
-            <li>React</li>
-            <li>Node</li>
-            <li>Express</li>
-            <li>Puppeteer</li>
+            {data.tech && data.tech.length
+              ? data.tech.map(item => <li>{item}</li>)
+              : null}
           </ul>
         </CardBody>
       </CardSide>

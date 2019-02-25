@@ -9,9 +9,14 @@ export default function ProjectsCardList() {
 
   const ProjectsCardListContainer = styled.div`
     font-family: 'Lato';
-    font-size: '2rem';
+    font-size: 2rem;
     ${flexCenter()};
-    flex-direction: 'row';
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 4rem;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 100%;
   `
   return (
     <ProjectsCardListContainer>

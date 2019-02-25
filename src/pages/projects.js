@@ -9,13 +9,12 @@ const ProjectsContainer = styled.div`
   position: relative;
   z-index: 10;
   height: 100%;
-  ${flexCenter()};
+  width: 100%;
+  background-color: ${({ theme }) => theme.light} ${flexCenter()};
   ${// @ts-ignore
   mq.phone`
-    width: 90%;
     top: 15%;
     `}
-  flex-wrap: wrap;
 `
 
 export default class Projects extends React.Component {
