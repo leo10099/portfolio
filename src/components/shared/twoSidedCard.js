@@ -2,8 +2,10 @@ import React from 'react'
 
 import styled from 'styled-components'
 import mq from '../shared/mixins/mediaQueries'
-import Image from '../../images/code1.jpg'
+
 import flexCenter from './mixins/flexCenter'
+
+import CardControllers from '../../components/projects/projectCardControlls'
 
 const CardSide = styled.div``
 
@@ -61,6 +63,20 @@ ${mq.tablet`
   &:hover .back {
     transform: rotateY(0);
   }
+
+  .back-title{
+    color: ${({ theme }) => theme.light};
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    text-align:center;
+  }
+  .back-subtitle{
+    color: ${({ theme }) => theme.light};
+    font-size: 2rem;
+    font-weight:bold;
+    text-transform: uppercase;
+    padding-top: 3rem
+  }
 `
 const CardImage = styled.div`
   height: 23rem;
@@ -73,7 +89,7 @@ const CardImage = styled.div`
       ${({ theme }) => theme.secondary},
       ${({ theme }) => theme.danger}
     ),
-    url(${Image});
+    url(${props => props.imagePath});
 `
 const CardTitle = styled.h4`
   font-size: 2.3rem;
@@ -127,10 +143,11 @@ const CardBody = styled.div`
 
 export default function TwoSidedCard(props) {
   const { data } = props
+
   return (
     <Card>
       <CardSide className="front">
-        <CardImage>&nbsp;</CardImage>
+        <CardImage imagePath={data.pic}>&nbsp;</CardImage>
         <CardTitle>
           <CardTitleBackground>{data.shortName}</CardTitleBackground>
         </CardTitle>
@@ -143,7 +160,11 @@ export default function TwoSidedCard(props) {
         </CardBody>
       </CardSide>
       <CardSide className="back">
-        <CardBody />
+        <CardBody>
+          <span className="back-title">{data.year}</span>
+          <span className="back-subtitle">{data.type}</span>
+          <CardControllers />
+        </CardBody>
       </CardSide>
     </Card>
   )

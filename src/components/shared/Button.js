@@ -3,7 +3,10 @@ import styled from 'styled-components'
 import mq from '../../components/shared/mixins/mediaQueries'
 import landscape from '../shared/mixins/orientationLandscape'
 
-const Button = styled.a`
+const NormalButton = styled.a`
+  position: relative;
+  top: ${props => props.position};
+  text-align: center;
   &,
   &:link,
   &:visited {
@@ -26,21 +29,14 @@ const Button = styled.a`
     ${mq.phone`letter-spacing:3px;`}
     font-weight: 500;
     color: white;
-
+    border: 2px solid ${({ theme }) => theme.light2};
     border: none;
     cursor: pointer;
-
-    background-blend-mode: screen;
-    background-image: linear-gradient(
-      to right,
-      ${({ theme }) => theme.primary},
-      ${({ theme }) => theme.danger},
-      ${({ theme }) => theme.secondary}
-    );
   }
 
   &:hover {
     transform: translateY(-3px);
+    border: 2px solid ${({ theme }) => theme.light2};
 
     &::after {
       transform: scaleX(1.4) scaleY(1.6);
@@ -52,6 +48,7 @@ const Button = styled.a`
   &:focus {
     outline: none;
     transform: translateY(-1px);
+
     box-shadow: 0 0.5rem 1rem rgba(black, 0.2);
   }
 
@@ -63,18 +60,18 @@ const Button = styled.a`
     border-radius: 4rem;
     position: absolute;
     top: 0;
-    background-image: linear-gradient(
-      to right,
-      ${({ theme }) => theme.primary},
-      ${({ theme }) => theme.danger},
-      ${({ theme }) => theme.secondary}
-    );
+    border: 2px solid ${({ theme }) => theme.light2};
+
     left: 0;
     z-index: -1;
     transition: all 0.4s;
   }
 `
 
-export default function FlashyButton(props) {
-  return <Button fontSize={props.fontSize}>{props.children}</Button>
+export default function Button(props) {
+  return (
+    <NormalButton fontSize={props.fontSize} position={props.position}>
+      {props.children}
+    </NormalButton>
+  )
 }

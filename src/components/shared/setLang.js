@@ -11,6 +11,7 @@ const LangToggleContainer = styled.div`
   font-family: 'Open Sans';
   right: 3vw;
   bottom: 1rem;
+
   a.idioma {
     font-weight: 400;
     cursor: pointer;

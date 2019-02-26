@@ -45,8 +45,6 @@ export default function AboutPage() {
 const About = styled.section`
   ${flexCenter()}
   background: ${({ theme }) => theme.light};
-
-
   height: 110vh;
   margin-top: -16rem;
 
@@ -86,7 +84,7 @@ const AboutMeCard = styled.div`
 const AboutMeTextContainer = styled.div`
   width: 66%;
   position: relative;
-  ${mq.phone`width :100%`}
+  ${mq.phone`width: 100%`}
   height: 350px;
   color: whitesmoke;
   ${flexCenter()}
@@ -95,7 +93,7 @@ const AboutMeTextContainer = styled.div`
 `
 const AboutMeProfilePicContainer = styled.div`
   height: 350px;
-  ${mq.phone`width :100%`}
+  ${mq.phone`width: 100%`}
   width: 33%;
 
   ${flexCenter()};

@@ -20,9 +20,9 @@ export default function ProjectsCardList() {
     flex-wrap: wrap;
     ${mq.phone`
     flex-direction: column;
-    display:block;
+    display: block;
     justify-content: center;
-    margin:auto;
+    margin: auto;
     padding:0;
     `}
   `
