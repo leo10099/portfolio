@@ -76,5 +76,9 @@ const Button = styled.a`
 `
 
 export default function FlashyButton(props) {
-  return <Button fontSize={props.fontSize}>{props.children}</Button>
+  return (
+    <Button href={props.href} fontSize={props.fontSize}>
+      {props.children}
+    </Button>
+  )
 }

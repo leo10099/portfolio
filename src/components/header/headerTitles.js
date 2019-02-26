@@ -12,7 +12,7 @@ export default function HeaderTitles(props) {
       letter-spacing: 4px;
       font-size: 12rem;
       ${mq.phone`font-size: 7rem;`}
-      ${landscape.tablet`font-size: 5rem;`}
+      ${landscape.tablet`font-size: 5rem;`};
     }
 
     .subtitle {
