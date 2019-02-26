@@ -71,7 +71,11 @@ const NormalButton = styled.button`
 
 export default function Button(props) {
   return (
-    <NormalButton fontSize={props.fontSize} position={props.position}>
+    <NormalButton
+      fontSize={props.fontSize}
+      position={props.position}
+      onClick={props.onClick}
+    >
       {props.children}
     </NormalButton>
   )

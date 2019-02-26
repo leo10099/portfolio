@@ -163,7 +163,7 @@ export default function TwoSidedCard(props) {
         <CardBody>
           <span className="back-title">{data.year}</span>
           <span className="back-subtitle">{data.type}</span>
-          <CardControllers />
+          <CardControllers url={data.url} />
         </CardBody>
       </CardSide>
     </Card>

@@ -15,7 +15,7 @@ module.exports = {
       shortName: 'Crema de Caramelo',
       tech: ['Node', 'Express', 'React', 'Styled Components'],
       type: 'Freelance',
-      url: 'https://test-got.now.sh',
+      url: 'https://bit.do/cremadecaramelo',
       year: 2018,
     },
     {
