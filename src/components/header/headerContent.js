@@ -43,7 +43,10 @@ export default () => {
         <LocaleContext.Consumer>
           {({ locale }) => (
             <>
-              <FlashyButton fontSize={'1.3rem'}>
+              <FlashyButton
+                fontSize={'1.3rem'}
+                href="mailto:leandrohanc@gmail.com"
+              >
                 {locale === 'es' ? ES_CALL_TO_ACTION : EN_CALL_TO_ACTION}
               </FlashyButton>
             </>

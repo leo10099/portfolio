@@ -41,7 +41,10 @@ module.exports = {
           urls: `fonts.css`,
         },
         google: {
-          families: ['Open Sans: 300,400,500,700,900'],
+          families: [
+            'Open Sans: 300,400,500,700,900',
+            'Lato: 300,400,500,700,900',
+          ],
         },
       },
     },

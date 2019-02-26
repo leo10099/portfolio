@@ -6,6 +6,7 @@ import landscape from '../shared/mixins/orientationLandscape'
 const NormalButton = styled.button`
   position: relative;
   text-align: center;
+  background-color: ${({ theme }) => theme.light};
   top: 66%;
 
   &,
