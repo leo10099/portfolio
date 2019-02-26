@@ -9,8 +9,8 @@ const LangToggleContainer = styled.div`
   font-size: 1.6rem;
   ${mq.tablet`font-size:1.3rem`}
   font-family: 'Open Sans';
-  right: 3vw;
-  bottom: 1rem;
+  top: 25%;
+  right: 3%;
 
   a.idioma {
     font-weight: 400;

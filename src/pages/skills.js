@@ -5,6 +5,7 @@ import SkillGroups from '../components/skills/skillGroups'
 import BackgroundTitle from '../components/shared/backgroundSectionTitle'
 import mq from '../components/shared/mixins/mediaQueries'
 import Landscape from '../components/shared/mixins/orientationLandscape'
+import SetLang from '../components/shared/setLang'
 
 const SkillsContainer = styled.div`
   min-height: 95vh;
@@ -36,6 +37,7 @@ const SkillsSvgContainer = styled.div`
 export default function Skills() {
   return (
     <section id="Skills">
+      <SetLang />
       <SkillsContainer className="clipped-background-skills">
         <SkillsSvgContainer>
           <SkillGroups />

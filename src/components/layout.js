@@ -10,7 +10,7 @@ import { ThemeProvider } from 'styled-components'
 import theme from '../components/shared/theme'
 
 // LOCALES
-import SetLang from '../components/shared/setLang'
+
 import LocaleProvider from '../components/shared/localeContextProvider'
 
 // PAGES
@@ -36,7 +36,6 @@ export default class Layout extends Component {
               <About />
               <Skills />
               <Projects />
-              <SetLang />
             </>
           </LocaleProvider>
         </>

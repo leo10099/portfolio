@@ -5,9 +5,6 @@ import flexCenter from '../components/shared/mixins/flexCenter'
 import BackgroundTitle from '../components/shared/backgroundSectionTitle'
 import ProjectsCardList from '../components/projects/projectsCardList'
 
-// LOCALES
-import SetLang from '../components/shared/setLang'
-
 const ProjectsContainer = styled.div`
   position: relative;
   z-index: 10;
@@ -27,7 +24,6 @@ export default class Projects extends React.Component {
             work
           </BackgroundTitle>
         </ProjectsContainer>
-        <SetLang />
       </section>
     )
   }

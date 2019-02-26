@@ -3,10 +3,11 @@ import styled from 'styled-components'
 import mq from '../../components/shared/mixins/mediaQueries'
 import landscape from '../shared/mixins/orientationLandscape'
 
-const NormalButton = styled.a`
+const NormalButton = styled.button`
   position: relative;
-  top: ${props => props.position};
   text-align: center;
+  top: 66%;
+
   &,
   &:link,
   &:visited {
@@ -28,7 +29,7 @@ const NormalButton = styled.a`
     letter-spacing: 4px;
     ${mq.phone`letter-spacing:3px;`}
     font-weight: 500;
-    color: white;
+    color: ${({ theme }) => theme.secondary};
     border: 2px solid ${({ theme }) => theme.light2};
     border: none;
     cursor: pointer;
