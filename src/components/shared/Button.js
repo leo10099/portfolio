@@ -6,8 +6,10 @@ import landscape from '../shared/mixins/orientationLandscape'
 const NormalButton = styled.button`
   position: relative;
   text-align: center;
-  background-color: ${({ theme }) => theme.light};
-  top: 66%;
+  color: ${({ theme }) => theme.ligth};
+  top: 70%;
+  border: 0;
+  box-shadow: none;
 
   &,
   &:link,
@@ -17,7 +19,6 @@ const NormalButton = styled.button`
     text-shadow: none;
     padding: 1.5rem 3.5rem;
     ${landscape.tablet`padding: 1rem 2.6rem`}
-
     display: block;
     width: 50%;
     ${mq.phone`width: 66%;`}
@@ -26,19 +27,17 @@ const NormalButton = styled.button`
     transition: all 0.2s;
     position: relative;
     font-size: ${({ fontSize }) => fontSize};
-    opacity: 0.85;
     letter-spacing: 4px;
     ${mq.phone`letter-spacing:3px;`}
     font-weight: 500;
     color: ${({ theme }) => theme.secondary};
-    border: 2px solid ${({ theme }) => theme.light2};
+
     border: none;
     cursor: pointer;
   }
 
   &:hover {
     transform: translateY(-3px);
-    border: 2px solid ${({ theme }) => theme.light2};
 
     &::after {
       transform: scaleX(1.4) scaleY(1.6);
@@ -50,8 +49,6 @@ const NormalButton = styled.button`
   &:focus {
     outline: none;
     transform: translateY(-1px);
-
-    box-shadow: 0 0.5rem 1rem rgba(black, 0.2);
   }
 
   &::after {
