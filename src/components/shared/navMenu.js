@@ -4,6 +4,19 @@ import { GradientThreeColors } from './mixins/gradient'
 import LocaleContext from '../shared/localeContext'
 import mq from '../../components/shared/mixins/mediaQueries'
 
+import {
+  EN_MENU_HOME,
+  EN_MENU_ABOUT,
+  EN_MENU_SKILLS,
+  EN_MENU_WORKS,
+} from '../../locales/en.json'
+import {
+  ES_MENU_HOME,
+  ES_MENU_ABOUT,
+  ES_MENU_SKILLS,
+  ES_MENU_WORKS,
+} from '../../locales/es.json'
+
 const NavMenuContainer = styled.section`
   font-family: 'Lato';
 
@@ -176,6 +189,11 @@ const NavMenuContainer = styled.section`
 `
 
 export default class NavMenu extends Component {
+  inputRef = React.createRef()
+
+  handleMenuItemClick = () => {
+    this.inputRef.current.click()
+  }
   render() {
     return (
       <NavMenuContainer>
@@ -186,6 +204,7 @@ export default class NavMenu extends Component {
                 type="checkbox"
                 className="navigation__checkbox"
                 id="navi-toggle"
+                ref={this.inputRef}
               />
 
               <label htmlFor="navi-toggle" className="navigation__button">
@@ -196,24 +215,36 @@ export default class NavMenu extends Component {
 
               <nav className="navigation__nav">
                 <ul className="navigation__list">
-                  <li className="navigation__item">
-                    <a href="#" className="navigation__link">
-                      Home
+                  <li
+                    className="navigation__item"
+                    onClick={this.handleMenuItemClick}
+                  >
+                    <a href="#Header" className="navigation__link">
+                      {locale === 'en' ? EN_MENU_HOME : ES_MENU_HOME}
                     </a>
                   </li>
-                  <li className="navigation__item">
+                  <li
+                    className="navigation__item"
+                    onClick={this.handleMenuItemClick}
+                  >
                     <a href="#About" className="navigation__link">
-                      About me
+                      {locale === 'en' ? EN_MENU_ABOUT : ES_MENU_ABOUT}
                     </a>
                   </li>
-                  <li className="navigation__item">
-                    <a href="#" className="navigation__link">
-                      Skills
+                  <li
+                    className="navigation__item"
+                    onClick={this.handleMenuItemClick}
+                  >
+                    <a href="#Skills" className="navigation__link">
+                      {locale === 'en' ? EN_MENU_SKILLS : ES_MENU_SKILLS}
                     </a>
                   </li>
-                  <li className="navigation__item">
-                    <a href="#" className="navigation__link">
-                      Work
+                  <li
+                    className="navigation__item"
+                    onClick={this.handleMenuItemClick}
+                  >
+                    <a href="#Projects" className="navigation__link">
+                      {locale === 'en' ? EN_MENU_WORKS : ES_MENU_WORKS}
                     </a>
                   </li>
                 </ul>

@@ -1,5 +1,9 @@
 {
   "ES_CALL_TO_ACTION": "Contactame",
+  "ES_MENU_HOME": "Inicio",
+  "ES_MENU_ABOUT": "Sobre mí",
+  "ES_MENU_SKILLS": "Conocimientos",
+  "ES_MENU_WORKS": "Proyectos",
   "ES_GREETING": "¡Hola! Soy Leandro",
   "ES_ABOUT_ME_DESCRIPTION": "Un desarrollador web autodidacta",
   "ES_ABOUT_ME_P1": "Me encanta armar aplicaciones web y resolver problemas técnicos.",
