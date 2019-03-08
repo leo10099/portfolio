@@ -17,6 +17,8 @@ import {
   ES_MENU_WORKS,
 } from '../../locales/es.json'
 
+const scale = window.screen.width / 25
+
 const NavMenuContainer = styled.section`
   font-family: 'Lato';
 
@@ -32,13 +34,15 @@ const NavMenuContainer = styled.section`
     position: fixed;
     top: 6rem;
     right: 6rem;
-    ${// @ts-ignore
-    mq.phone` 
+    ${
+      // @ts-ignore
+      mq.phone` 
       top: 2rem;
       right: 2rem;
       height: 6rem;
     width: 6rem;
-    `}
+    `
+    }
     z-index: 2000;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -63,13 +67,15 @@ const NavMenuContainer = styled.section`
     z-index: 1000;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
 
-    ${// @ts-ignore
-    mq.phone`
+    ${
+      // @ts-ignore
+      mq.phone`
       top: 2rem;
       right:2rem;
       height: 6rem;
     width: 6rem;
-    `}
+    `
+    }
   }
 
   .navigation__nav {
@@ -129,7 +135,20 @@ const NavMenuContainer = styled.section`
   }
 
   .navigation__checkbox:checked ~ .navigation__background {
-    transform: scale(80);
+    ${
+      // @ts-ignore
+      mq.phone`
+      transform: scale(40);
+    `
+    }
+    ${
+      // @ts-ignore
+      mq.tablet`
+      transform: scale(50);
+    `
+    }
+
+     transform: scale(${scale});
   }
 
   .navigation__checkbox:checked ~ .navigation__nav {
@@ -140,10 +159,12 @@ const NavMenuContainer = styled.section`
   .navigation__icon {
     position: relative;
     top: 3.5rem;
-    ${// @ts-ignore
-    mq.phone`
+    ${
+      // @ts-ignore
+      mq.phone`
       top: 3rem;
-    `}
+    `
+    }
 
     &,
     &::before,
@@ -194,6 +215,7 @@ export default class NavMenu extends Component {
   handleMenuItemClick = () => {
     this.inputRef.current.click()
   }
+
   render() {
     return (
       <NavMenuContainer>
