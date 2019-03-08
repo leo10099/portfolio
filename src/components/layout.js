@@ -13,6 +13,9 @@ import theme from '../components/shared/theme'
 
 import LocaleProvider from '../components/shared/localeContextProvider'
 
+// NAV MENU
+import NavMenu from '../components/shared/navMenu'
+
 // PAGES
 import Header from '../pages/header'
 import About from '../pages/about'
@@ -32,6 +35,7 @@ export default class Layout extends Component {
           <GlobalStyles />
           <LocaleProvider>
             <>
+              <NavMenu />
               <Header />
               <About />
               <Skills />
