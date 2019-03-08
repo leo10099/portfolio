@@ -17,12 +17,16 @@ const Card = styled.div`
   margin: 4rem auto;
 
   ${mq.phone`
-  margin: 4rem auto;
-  width: 85vw;
+      width: 300px;
+      height:500px;
+      margin-left:auto;
+      margin-right:auto;
+  
     `}
 
 ${mq.tablet`
   margin: 4rem auto;
+
     `}
 
   ${CardSide} {
@@ -41,9 +45,10 @@ ${mq.tablet`
     overflow: hidden;
 
     ${mq.phone`
-      width: 85vw;
-      margin-left:auto;
-      margin-right:auto;
+      width: 300px;
+      height: 500px;
+      margin-left: auto;
+      margin-right: auto;
     `}
   }
 
@@ -80,6 +85,7 @@ ${mq.tablet`
 `
 const CardImage = styled.div`
   height: 23rem;
+  background-position: center;
   background-size: cover;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   background-blend-mode: screen;

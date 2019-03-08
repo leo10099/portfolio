@@ -15,23 +15,17 @@ const NavMenuContainer = styled.section`
     background-color: ${({ theme }) => theme.light};
     height: 7rem;
     width: 7rem;
-        ${
-          // @ts-ignore
-          mq.phone`
-    height: 7rem;
-    width: 7rem;
-    `
-        }
     border-radius: 50%;
     position: fixed;
     top: 6rem;
     right: 6rem;
-    ${
-      // @ts-ignore
-      mq.phone`top: 5%;
-    right:5%;
-    `
-    }
+    ${// @ts-ignore
+    mq.phone` 
+      top: 2rem;
+      right: 2rem;
+      height: 6rem;
+    width: 6rem;
+    `}
     z-index: 2000;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -41,23 +35,12 @@ const NavMenuContainer = styled.section`
   .navigation__background {
     height: 6rem;
     width: 6rem;
-    ${
-      // @ts-ignore
-      mq.phone`
-      height: 7rem;
-    width: 7rem;
-    `
-    }
+
     border-radius: 50%;
     position: fixed;
     top: 6.5rem;
     right: 6.5rem;
-    ${
-      // @ts-ignore
-      mq.phone`top: 5%;
-    right:5%;
-    `
-    }
+
     background: ${({ theme }) =>
       GradientThreeColors(
         theme.dangerDark,
@@ -66,17 +49,28 @@ const NavMenuContainer = styled.section`
       )};
     z-index: 1000;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+
+    ${// @ts-ignore
+    mq.phone`
+      top: 2rem;
+      right:2rem;
+      height: 6rem;
+    width: 6rem;
+    `}
   }
 
   .navigation__nav {
     height: 100vh;
     position: fixed;
-    top: 20%;
-    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 1500;
 
     opacity: 0;
     width: 0;
+
     transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
@@ -86,12 +80,13 @@ const NavMenuContainer = styled.section`
   }
 
   .navigation__item {
-    margin: 1rem;
+    margin: 2.5rem 1rem;
   }
 
   .navigation__link {
     display: inline-block;
     font-size: 3rem;
+
     font-weight: 300;
     padding: 1rem 2rem;
     color: ${({ theme }) => theme.light2};
@@ -103,8 +98,9 @@ const NavMenuContainer = styled.section`
       transparent 50%,
       #ebebeb 50%
     );
+
     background-size: 250%;
-    transition: all 0.4s ease;
+    transition: all 0.4s;
 
     span {
       margin-right: 1.5rem;
@@ -131,6 +127,10 @@ const NavMenuContainer = styled.section`
   .navigation__icon {
     position: relative;
     top: 3.5rem;
+    ${// @ts-ignore
+    mq.phone`
+      top: 3rem;
+    `}
 
     &,
     &::before,
@@ -198,7 +198,7 @@ export default class NavMenu extends Component {
                 <ul className="navigation__list">
                   <li className="navigation__item">
                     <a href="#" className="navigation__link">
-                      About Natours
+                      Home
                     </a>
                   </li>
                   <li className="navigation__item">
@@ -208,17 +208,12 @@ export default class NavMenu extends Component {
                   </li>
                   <li className="navigation__item">
                     <a href="#" className="navigation__link">
-                      Popular tours
+                      Skills
                     </a>
                   </li>
                   <li className="navigation__item">
                     <a href="#" className="navigation__link">
-                      Stories
-                    </a>
-                  </li>
-                  <li className="navigation__item">
-                    <a href="#" className="navigation__link">
-                      Book now
+                      Work
                     </a>
                   </li>
                 </ul>

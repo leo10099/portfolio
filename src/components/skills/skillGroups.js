@@ -42,7 +42,7 @@ const SkillGroup = styled.div`
     ${// @ts-ignore
     mq.phone`
    margin-bottom: 2rem;
-   width: 100px;
+   width: 80px;
     `}
   }
 
