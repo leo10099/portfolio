@@ -17,7 +17,7 @@ import {
   ES_MENU_WORKS,
 } from '../../locales/es.json'
 
-const scale = window.screen.width / 25
+const scale = typeof window !== 'undefined' && window.screen.width / 25
 
 const NavMenuContainer = styled.section`
   font-family: 'Lato';
