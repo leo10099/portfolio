@@ -1,4 +1,4 @@
-# My Portfolio
+## My Portfolio
 
 ##### Built with React SSG [GatsbyJS](https://www.gatsbyjs.org/) 
 
